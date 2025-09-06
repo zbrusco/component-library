@@ -1,4 +1,4 @@
-import { BsStar, BsStarFill } from "react-icons/bs";
+import { FaRegStar, FaStar } from "react-icons/fa6";
 import useToggle from "../hooks/useToggle";
 
 export default function Star({ onChange = () => {} }) {
@@ -7,9 +7,9 @@ export default function Star({ onChange = () => {} }) {
   return (
     <>
       {on ? (
-        <BsStarFill onClick={toggleOpen} className="star filled" />
+        <FaStar onClick={toggleOpen} className="star filled" />
       ) : (
-        <BsStar onClick={toggleOpen} className="star" />
+        <FaRegStar onClick={toggleOpen} className="star" />
       )}
     </>
   );
