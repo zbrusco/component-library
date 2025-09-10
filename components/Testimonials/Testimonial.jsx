@@ -1,4 +1,5 @@
 import { FaQuoteLeft } from "react-icons/fa6";
+import styles from "./Testimonial.module.css";
 
 export default function Testimonial({
   children,
@@ -12,19 +13,19 @@ export default function Testimonial({
 
   return (
     <>
-      <div className="testimonial">
-        <div className="testimonial__img">
+      <div className={styles["testimonial"]}>
+        <div className={styles["testimonial__img"]}>
           <img
-            className="testimonial__img-photo"
+            className={styles["testimonial__img-photo"]}
             src={src}
             alt={`Photo of ${name}`}
           />
         </div>
-        <div className="testimonial__content">
-          <FaQuoteLeft className="testimonial__quote" />
-          {msg && <div className="testimonial__msg">{msg}</div>}
+        <div className={styles["testimonial__content"]}>
+          <FaQuoteLeft className={styles["testimonial__quote"]} />
+          {msg && <div className={styles["testimonial__msg"]}>{msg}</div>}
           {(name || fullTitle) && (
-            <div className="testimonial__info">
+            <div className={styles["testimonial__info"]}>
               {name && <strong>{name}</strong>}
               {fullTitle && <span>{fullTitle}</span>}
             </div>

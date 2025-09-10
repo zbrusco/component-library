@@ -1,3 +1,5 @@
+import styles from "./Testimonial.module.css";
+
 export default function TestimonialNoPic({
   children,
   src = "Company logo src",
@@ -8,13 +10,19 @@ export default function TestimonialNoPic({
 }) {
   const fullTitle = [jobTitle, company].filter(Boolean).join(", ");
   return (
-    <div className="testimonial testimonial--no-pic">
-      <img className="testimonial__icon" src={src} alt={`${company} Logo`} />
-      <div className="testimonial__content">
-        {msg && <div className="testimonial__msg">{msg}</div>}
+    <div
+      className={`${styles["testimonial"]} ${styles["testimonial--no-pic"]}`}
+    >
+      <img
+        className={styles["testimonial__icon"]}
+        src={src}
+        alt={`${company} Logo`}
+      />
+      <div className={styles["testimonial__content"]}>
+        {msg && <div className={styles["testimonial__msg"]}>{msg}</div>}
         {children}
         {(name || fullTitle) && (
-          <div className="testimonial__info">
+          <div className={styles["testimonial__info"]}>
             {name && <strong>{name}</strong>}
             {fullTitle && <span>{fullTitle}</span>}
           </div>

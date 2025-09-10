@@ -1,12 +1,13 @@
 import ReactDOM from "react-dom/client";
 import Menu from "./components/Menu/index";
-import Star from "./components/Star";
-import Badge from "./components/Badge";
-import Banner from "./components/Banner";
-import Card from "./components/Card";
+import Star from "./components/Star/Star";
+import Badge from "./components/Badge/Badge";
+import Banner from "./components/Banner/Banner";
+import Card from "./components/Card/Card";
 import Testimonial from "./components/Testimonials/Testimonial";
 import TestimonialNoPic from "./components/Testimonials/TestimonialNoPic";
 import Logo from "./static/companyLogo.png";
+import Button from "./components/Button/Button";
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
       <Badge type="pill" color="indigo">
         Badge
       </Badge>
+      <Menu>
+        <Menu.Button>Menu</Menu.Button>
+        <Menu.Dropdown>
+          <Menu.Item>Sport</Menu.Item>
+          <Menu.Item>Sport</Menu.Item>
+          <Menu.Item>Sport</Menu.Item>
+        </Menu.Dropdown>
+      </Menu>
       <Banner
         status="success"
         title="Congratulations!"
@@ -49,14 +58,6 @@ function App() {
         src="https://sm.ign.com/ign_br/screenshot/default/halo-infinite_hgkc.jpg"
       />
       <br />
-      <Menu>
-        <Menu.Button>Menu</Menu.Button>
-        <Menu.Dropdown>
-          <Menu.Item>Sport</Menu.Item>
-          <Menu.Item>Sport</Menu.Item>
-          <Menu.Item>Sport</Menu.Item>
-        </Menu.Dropdown>
-      </Menu>
     </>
   );
 }

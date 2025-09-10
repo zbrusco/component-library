@@ -4,6 +4,7 @@ import {
   FaCircleXmark,
   FaCircleInfo,
 } from "react-icons/fa6";
+import styles from "./Banner.module.css";
 
 export default function Banner({
   children,
@@ -12,8 +13,8 @@ export default function Banner({
   msg = "",
   className = "",
 }) {
-  const statusClass = status && `banner-${status}`;
-  const allClasses = ["banner", statusClass, className]
+  const statusClass = status && styles[`banner-${status}`];
+  const allClasses = [styles["banner"], statusClass, className]
     .filter(Boolean)
     .join(" ");
 
@@ -27,9 +28,9 @@ export default function Banner({
   return (
     <div className={allClasses}>
       <div>{badgeIcons[status]}</div>
-      <div className="banner-content">
-        {title && <div className="banner-title">{title}</div>}
-        {msg && <div className="banner-msg">{msg}</div>}
+      <div className={styles["banner-content"]}>
+        {title && <div className={styles["banner-title"]}>{title}</div>}
+        {msg && <div className={styles["banner-msg"]}>{msg}</div>}
         {children}
       </div>
     </div>

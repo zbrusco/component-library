@@ -1,0 +1,48 @@
+/* Badge Styles */
+/* -------------- */
+.badge {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  text-align: center;
+  padding: 0.2rem 0.75rem;
+  max-width: 67px;
+  max-height: 24px;
+}
+.badge-square {
+  border-radius: 4px;
+}
+.badge-pill {
+  border-radius: 12px;
+}
+.badge-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+.badge-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.badge-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.badge-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+.badge-indigo {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+.badge-purple {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+.badge-pink {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+/* -------------- */

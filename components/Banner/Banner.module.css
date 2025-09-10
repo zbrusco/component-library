@@ -1,0 +1,39 @@
+/* Banner Styles */
+/* -------------- */
+.banner {
+  max-width: 896px;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 1rem 0;
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.banner-title {
+  font-weight: bold;
+}
+.banner-msg {
+  font-weight: 500;
+}
+.banner-success {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+.banner-warning {
+  background-color: #fffbeb;
+  color: #92400e;
+}
+.banner-error {
+  background-color: #fef2f2;
+  color: #92400e;
+}
+.banner-neutral {
+  background-color: #eff6ff;
+  color: #1e40af;
+}
+/* -------------- */
