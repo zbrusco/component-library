@@ -1,11 +1,9 @@
 /* Testimonial Styles */
-/* -------------- */
 .testimonial {
   display: flex;
   flex-direction: column;
   margin: 8rem 0;
   width: 100%;
-  position: relative;
   background: #2545b8;
   color: white;
   padding: 0 2rem 2rem 2rem;
@@ -19,8 +17,8 @@
 .testimonial__img {
   position: relative;
   flex-shrink: 0;
-  width: 80%;
-  max-width: 275px;
+  width: 100%;
+  max-width: 384px;
   height: 100px;
   margin: 0 auto 2rem auto;
 }
@@ -59,37 +57,6 @@
   font-size: 1rem;
 }
 
-.testimonial__icon {
-  margin: 2rem auto 0 auto;
-  max-width: 100px;
-  max-height: 100px;
-}
-
-.testimonial--no-pic {
-  background-color: white;
-  color: #111827;
-  font-weight: 500;
-  padding: 0;
-  align-items: center;
-}
-
-.testimonial--no-pic .testimonial__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.testimonial--no-pic .testimonial__msg {
-  max-width: 768px;
-  text-align: left;
-}
-
-.testimonial--no-pic .testimonial__info {
-  align-items: center;
-}
-
 /* Desktop Styles */
 @media (min-width: 769px) {
   .testimonial {
@@ -98,35 +65,30 @@
     padding: 0;
     max-height: 400px;
     max-width: 1358px;
-  }
-  .testimonial--no-pic {
-    flex-direction: column;
-  }
-  .testimonial--no-pic .testimonial__msg {
-    text-align: center;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 8%,
+      #2545b8 8%,
+      #2545b8 92%,
+      transparent 92%,
+      transparent 100%
+    );
   }
   .testimonial__content {
     padding: 4rem 4rem 4rem 0;
+    width: 70%;
   }
   .testimonial__img {
-    width: 275px;
-    height: auto;
+    max-width: 275px;
+    width: 30%;
+    height: 100%;
     aspect-ratio: 4 / 5;
     margin: 0 4rem;
   }
   .testimonial__img-photo {
-    height: 125%;
-    transform: translateY(-10%);
-  }
-  .testimonial__info {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .testimonial__info > *:not(:last-child)::after {
-    content: "/";
-    color: #2e59f3;
-    font-weight: bold;
-    margin-left: 0.5rem;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0%);
   }
 }

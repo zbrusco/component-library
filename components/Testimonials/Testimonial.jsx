@@ -13,7 +13,9 @@ export default function Testimonial({
 
   return (
     <>
-      <div className={styles["testimonial"]}>
+      <div
+        className={`${styles["testimonial"]} ${styles["testimonial-float"]}`}
+      >
         <div className={styles["testimonial__img"]}>
           <img
             className={styles["testimonial__img-photo"]}
