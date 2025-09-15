@@ -23,29 +23,29 @@
 }
 
 /* Small */
-.button.button-sm {
+.button-sm {
   padding: 7px 11px;
   font-size: 12px;
 }
 
 /* Large */
-.button.button-lg {
+.button-lg {
   padding: 13px 25px;
 }
 
-.button.button-success {
+.button-success {
   color: #047857;
   background-color: #ecfdf5;
   border-color: #047857;
 }
 
-.button.button-warning {
+.button-warning {
   color: #fbbf24;
   background-color: #fffbeb;
   border-color: #fbbf24;
 }
 
-.button.button-danger {
+.button-danger {
   color: #f87171;
   background-color: #fef2f2;
   border-color: #f87171;
