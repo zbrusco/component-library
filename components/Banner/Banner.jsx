@@ -31,7 +31,6 @@ export default function Banner({
       <div className={styles["banner-content"]}>
         {title && <div className={styles["banner-title"]}>{title}</div>}
         {msg && <div className={styles["banner-msg"]}>{msg}</div>}
-        {children}
       </div>
     </div>
   );

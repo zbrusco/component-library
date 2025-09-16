@@ -10,12 +10,13 @@ export default function TestimonialNoPic({
 }) {
   const fullTitle = [jobTitle, company].filter(Boolean).join(", ");
   return (
-    <div className={styles["testimonial--no-pic"]}>
+    <div className={styles["testimonial__no_pic"]}>
       <img
         className={styles["testimonial__icon"]}
         src={src}
         alt={`${company} Logo`}
       />
+      <div className={styles["testimonial__overlay"]}></div>
       <div className={styles["testimonial__content"]}>
         {msg && <div className={styles["testimonial__msg"]}>{msg}</div>}
         {children}
