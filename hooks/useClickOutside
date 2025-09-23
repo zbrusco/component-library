@@ -1,0 +1,16 @@
+import { useEffect } from "react";
+
+export default function useClickOutside(ref, callback = () => {}) {
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // When the div is rendered and the user clicks on an element that is not the trigger
+      if (ref.current && !ref.current.contains(event.target)) {
+        callback(event);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+}
