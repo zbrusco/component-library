@@ -1,0 +1,138 @@
+.tooltip {
+  display: flex;
+  flex-direction: row;
+  max-width: 384px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--title-color, #ffffff);
+  background: var(--background-color);
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  bottom: 100%;
+  z-index: 10;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.tooltip-gray-bold {
+  --background-color: #262626;
+  --msg-color: #c7c7c7;
+  --icon-color: #c7c7c7;
+  --button-hover: #a1a1a1;
+}
+
+.tooltip-blue-bold {
+  --background-color: #1e40af;
+  --msg-color: #e8edff;
+  --icon-color: #7ea6f2;
+  --button-hover: #5d8ed8;
+}
+
+.tooltip-pink-bold {
+  --background-color: #a9229b;
+  --msg-color: #ffe9fd;
+  --icon-color: #f462e6;
+  --button-hover: #c74abf;
+}
+
+.tooltip-green-bold {
+  --background-color: #47aa5d;
+  --msg-color: #e3ffe9;
+  --icon-color: #c1ffcf;
+  --button-hover: #9bd9aa;
+}
+
+.tooltip-gray-light {
+  --background-color: #ffffff;
+  --msg-color: #6b7280;
+  --title-color: #111827;
+  --icon-color: #6b7280;
+  --button-hover: #4a5058;
+}
+
+.tooltip-blue-light {
+  --background-color: #e0e7ff;
+  --msg-color: #1c51b9;
+  --title-color: #1e40af;
+  --icon-color: #1c51b9;
+  --button-hover: #153b91;
+}
+
+.tooltip-pink-light {
+  --background-color: #fff3fc;
+  --msg-color: #c7369e;
+  --title-color: #a9229b;
+  --icon-color: #c7369e;
+  --button-hover: #a32783;
+}
+
+.tooltip-green-light {
+  --background-color: #e7fff3;
+  --msg-color: #3c8c4e;
+  --title-color: #137a2a;
+  --icon-color: #41a557;
+  --button-hover: #318844;
+}
+
+.tooltip-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip-title {
+  color: var(--title-color);
+}
+
+.tooltip-msg {
+  color: var(--msg-color);
+}
+
+.tooltip-close-button {
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+  background-color: transparent;
+  font-size: 16px;
+  margin-top: 2px;
+  color: var(--icon-color);
+}
+
+.tooltip-close-button:hover {
+  background-color: transparent;
+  color: var(--button-hover);
+}
+
+.tooltip-icon {
+  margin-top: 2px;
+  font-size: 16px;
+  color: var(--icon-color);
+}
+
+.triangle {
+  --triangle-height: 15px;
+  --triangle-width: 30px;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--triangle-width) / 2) solid transparent;
+  border-right: calc(var(--triangle-width) / 2) solid transparent;
+  border-top: var(--triangle-height) solid;
+  border-top-color: var(--background-color);
+  margin-left: 12%;
+  filter: drop-shadow(0 6px 3px rgba(0, 0, 0, 0.05))
+    drop-shadow(0 10px 8px rgba(0, 0, 0, 0.1));
+}
