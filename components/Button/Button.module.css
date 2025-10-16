@@ -12,7 +12,8 @@
   border-radius: var(--button-radius);
   line-height: 24px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .button:hover {
   background-color: #d1d5db;
