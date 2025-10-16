@@ -14,7 +14,6 @@ export default function Selector({
   upIcon = <FaChevronUp />,
   downIcon = <FaChevronDown />,
   closeIcon = <FaXmark />,
-  children,
 }) {
   const [isOpen, setIsOpen] = React.useState(false); // State for the dropdown menu
   const [inputText, setInputText] = React.useState(initialSelected.label || ""); // State for the input text
@@ -43,10 +42,13 @@ export default function Selector({
     setActiveOption(value);
     setIsOpen(false);
     setAllowFilter(false);
-    setHighlightedIndex(null);
+    setHighlightedIndex(options.findIndex((option) => option.label === label));
     onChange(value);
   };
   const updateInputText = (e) => {
+    if (!isOpen) {
+      setIsOpen(true);
+    }
     setAllowFilter(true);
     setInputText(e.target.value);
   };
@@ -66,6 +68,7 @@ export default function Selector({
   const handleKeyDown = (e) => {
     if (!isOpen && e.key === "ArrowDown") {
       setIsOpen(true);
+      return;
     }
     const isNothingHighlighted = highlightedIndex === null;
     switch (e.key) {
@@ -112,7 +115,9 @@ export default function Selector({
         onChange={updateInputText}
         onClick={() => {
           setIsOpen((prev) => !prev);
-          setHighlightedIndex(null);
+          if (!activeOption) {
+            setHighlightedIndex(0);
+          }
         }}
         placeholder={label}
         className={styles.input}
