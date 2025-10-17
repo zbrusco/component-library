@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  width: 280px;
+  width: 100%;
   font-family: Inter, sans-serif;
   margin: auto;
 }
