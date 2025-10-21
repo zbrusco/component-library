@@ -1,0 +1,123 @@
+/* Toast Styles */
+/* -------------- */
+.toast-wrapper {
+  display: flex;
+  flex-direction: column;
+  --toast-radius: 6px;
+  border-radius: var(--toast-radius);
+}
+.toast-container {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  z-index: 9999;
+  padding: 20px;
+  width: 33%;
+}
+.toast {
+  max-width: 896px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+}
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.toast-title {
+  font-weight: bold;
+}
+.toast-msg {
+  font-weight: 500;
+}
+.toast-success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  --toast-color: #065f46;
+}
+.toast-warning {
+  background-color: #fffbeb;
+  color: #92400e;
+  --toast-color: #92400e;
+}
+.toast-error {
+  background-color: #fef2f2;
+  color: #92400e;
+  --toast-color: #92400e;
+}
+.toast-neutral {
+  background-color: #eff6ff;
+  color: #1e40af;
+  --toast-color: #1e40af;
+}
+.top-right {
+  top: 0;
+  right: 0;
+  flex-direction: column;
+}
+.top-left {
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+.top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  flex-direction: column-reverse;
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  flex-direction: column-reverse;
+}
+.bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column-reverse;
+}
+.toast-progress-bar {
+  min-height: 4px;
+  width: 100%;
+  background: linear-gradient(var(--toast-color, black) 0 0) 0/0% no-repeat #ddd;
+  animation: progress-bar-animation infinite linear;
+  border-radius: 0 0 var(--toast-radius) var(--toast-radius);
+}
+@keyframes progress-bar-animation {
+  100% {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  /* force all top/bottom containers to a single, centered stack */
+  .top-left,
+  .top-right,
+  .top-center {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+  }
+  .bottom-left,
+  .bottom-right,
+  .bottom-center {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column-reverse;
+  }
+  .toast-container {
+    width: 100%;
+  }
+}
+/* -------------- */
